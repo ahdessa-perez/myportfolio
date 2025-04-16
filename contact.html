@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <header>
+        <a href="contact.html" class="logo"><img src="logo.png" alt="Logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="wrapper">
+
+            <!-- COMPANY INFORMATION -->
+            <div class="company-info">
+                <h1>My Contact Info</h1>
+                <ul>
+                    <li><i class="fa fa-road"></i> Florence Way, 0932-Delta, Fort Bonifacio, Taguig City</li>
+                    <li><i class="fa fa-phone"></i> +6391 7660 0297</li>
+                    <li><i class="fa fa-envelope"></i> ahdessa_perez@dlsl.edu.ph</li>
+                </ul>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="contact">
+                <h3>E-mail Me</h3>
+
+                <!-- ✅ FormSubmit Integration -->
+                <form id="contact-form" action="https://formsubmit.co/ahdessa_perez@dlsl.edu.ph" method="POST">
+
+                    <!-- Hidden fields for FormSubmit setup -->
+                    <input type="hidden" name="_subject" value="New Portfolio Message!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+
+                    <p>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </p>
+
+                    <p>
+                        <label for="company">Company</label>
+                        <input type="text" name="company" id="company">
+                    </p>
+
+                    <p>
+                        <label for="email">E-mail Address</label>
+                        <input type="email" name="email" id="email" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone" id="phone">
+                    </p>
+
+                    <p class="full">
+                        <label for="message">Message</label>
+                        <textarea name="message" rows="5" id="message" required></textarea>
+                    </p>
+
+                    <p class="full">
+                        <button type="submit">Submit</button>
+                    </p>
+
+                </form>
+            </div>
+            <!-- End .contact -->
+
+        </div>
+        <!-- End .wrapper -->
+    </div>
+    <!-- End .container -->
+
+</body>
+
+</html>

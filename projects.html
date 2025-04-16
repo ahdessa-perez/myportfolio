@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="projects.html" class="logo"><img src="logo.png" alt="Logo"></a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="skills.html">Skills</a>
+            <!-- <a href="certifications.html">Certifications</a> -->
+            <!-- <a href="experience.html">Experience</a> -->
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="gallery-cards">
+    <div class="card-list">
+        <a href="#" class="card-item">
+            <img src="image1.jpg" alt="Card Image">
+            <span class="developer">Mobile Application</span>
+            <h3>This application integrates seamlessly with IoShroom's hardware components, enabling users to control and automate colonization and harvesting activities through an intuitive interface.</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        <a href="#" class="card-item">
+            <img src="image2.jpg" alt="Card Image">
+            <span class="designer">Website</span>
+            <h3>A seamless K-beauty website, where you can explore authentic skincare and makeup products, receive personalized recommendations, and stay updated on the latest trends—all in one intuitive platform.</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        <a href="#" class="card-item">
+            <img src="image3.jpg" alt="Card Image">
+            <span class="editor">Website</span>
+            <h3>Effortless hotel booking with intuitive UI/UX, designed for seamless navigation, personalized recommendations, and a smooth, hassle-free reservation process.</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        
+    </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+        const closeBtn = document.getElementsByClassName("close")[0];
+        const images = document.querySelectorAll(".card-item img");
+    
+        images.forEach(img => {
+            img.addEventListener("click", function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+    
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+    
+        // Optional: Close modal when clicking outside the image
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
